@@ -5,6 +5,17 @@ class SeatSelectBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('SeatSelectBox');
+    return Expanded(
+        child: Column(
+      children: [
+        Text(
+          'Screen',
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ));
   }
 }
