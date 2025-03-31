@@ -27,6 +27,16 @@ class SeatSelectBox extends StatelessWidget {
                   ),
                 ),
               ),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
             ],
           ),
         ],
@@ -35,3 +45,14 @@ class SeatSelectBox extends StatelessWidget {
   }
 }
 
+Widget seat() {
+  return Expanded(
+    child: Container(
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        color: Colors.grey,
+      ),
+    ),
+  );
+}
