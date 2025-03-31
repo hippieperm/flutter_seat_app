@@ -7,6 +7,7 @@ class SeatSelectBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
         child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           'Screen',
