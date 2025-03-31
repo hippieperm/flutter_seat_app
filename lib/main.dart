@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+  MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -32,10 +32,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text('Test app'),
       ),
       body: Center(
-        child: Text('$counter'),
+        child: Text(
+          '$counter',
+          style: TextStyle(fontSize: 100),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            counter++;
+          });
+          print('카운터 증가됨: $counter');
+        },
         child: Icon(Icons.add),
       ),
     );
