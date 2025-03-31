@@ -16,31 +16,42 @@ class SeatSelectBox extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          Row(
-            children: [
-              Expanded(
-                child: Center(
-                  child: Text(
-                    '1',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+          row(1),
+          row(2),
+          row(3),
+          row(4),
+          row(5),
+        ],
+      ),
+    );
+  }
+
+  Padding row(int rowNum) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        children: [
+          Expanded(
+            child: Center(
+              child: Text(
+                '$rowNum',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-            ],
+            ),
           ),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
         ],
       ),
     );
