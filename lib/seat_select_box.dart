@@ -19,11 +19,13 @@ class SeatSelectBox extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Text(
-                  '1',
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
+                child: Center(
+                  child: Text(
+                    '1',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
@@ -47,11 +49,15 @@ class SeatSelectBox extends StatelessWidget {
 
 Widget seat() {
   return Expanded(
-    child: AspectRatio(
-      aspectRatio: 1,
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.grey,
+    child: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 2),
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.grey,
+            borderRadius: BorderRadius.circular(10),
+          ),
         ),
       ),
     ),
