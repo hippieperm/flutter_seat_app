@@ -47,11 +47,12 @@ class SeatSelectBox extends StatelessWidget {
 
 Widget seat() {
   return Expanded(
-    child: Container(
-      width: 50,
-      height: 50,
-      decoration: BoxDecoration(
-        color: Colors.grey,
+    child: AspectRatio(
+      aspectRatio: 1,
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.grey,
+        ),
       ),
     ),
   );
