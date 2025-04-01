@@ -76,35 +76,37 @@ class SeatSelectBox extends StatelessWidget {
               ),
             ),
           ),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
+          seat(rowNum, 1),
+          seat(rowNum, 2),
+          seat(rowNum, 3),
+          seat(rowNum, 4),
+          seat(rowNum, 5),
+          seat(rowNum, 6),
+          seat(rowNum, 7),
+          seat(rowNum, 8),
+          seat(rowNum, 9),
+          seat(rowNum, 10),
         ],
       ),
     );
   }
-}
 
-Widget seat() {
-  return Expanded(
-    child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 2),
-      child: AspectRatio(
-        aspectRatio: 1,
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.grey,
-            borderRadius: BorderRadius.circular(10),
+  Widget seat(int rowNum, int colNum) {
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 2),
+        child: AspectRatio(
+          aspectRatio: 1,
+          child: Container(
+            decoration: BoxDecoration(
+              color: rowNum == selectedRow && colNum == selectedCol
+                  ? Colors.amber
+                  : Colors.grey,
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
