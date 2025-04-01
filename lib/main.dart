@@ -26,7 +26,6 @@ class SeatPage extends StatefulWidget {
 }
 
 class _SeatPageState extends State<SeatPage> {
-
   int? selectedRow;
   int? selectedCol;
 
@@ -39,8 +38,14 @@ class _SeatPageState extends State<SeatPage> {
       backgroundColor: Colors.grey[200],
       body: Column(
         children: [
-          SeatSelectBox(),
-          SeatBottom(),
+          SeatSelectBox(
+            selectedCol: selectedCol,
+            selectedRow: selectedRow,
+          ),
+          SeatBottom(
+            selectedCol: selectedCol,
+            selectedRow: selectedRow,
+          ),
         ],
       ),
     );
