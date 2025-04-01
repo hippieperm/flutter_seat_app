@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SeatBottom extends StatelessWidget {
-  const SeatBottom({super.key});
+  int? selectedRow;
+  int? selectedCol;
+  SeatBottom({this.selectedRow, this.selectedCol});
 
   @override
   Widget build(BuildContext context) {

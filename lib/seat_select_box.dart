@@ -4,7 +4,7 @@ class SeatSelectBox extends StatelessWidget {
   int? selectedRow;
   int? selectedCol;
 
-  SeatSelectBox({super.key, this.selectedRow, this.selectedCol});
+  SeatSelectBox({this.selectedRow, this.selectedCol});
 
   @override
   Widget build(BuildContext context) {
