@@ -33,38 +33,40 @@ class SeatBottom extends StatelessWidget {
             height: 56,
             child: ElevatedButton(
               onPressed: () {
-                showCupertinoDialog(
-                  context: context,
-                  builder: (context) {
-                    return CupertinoAlertDialog(
-                      title: Text('예약확인'),
-                      content: Text('예약 하시겠습니까?'),
-                      actions: [
-                        CupertinoDialogAction(
-                          isDefaultAction: true,
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: Text(
-                            '취소',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                if (selectedRow != null && selectedCol != null) {
+                  showCupertinoDialog(
+                    context: context,
+                    builder: (context) {
+                      return CupertinoAlertDialog(
+                        title: Text('예약확인'),
+                        content: Text('예약 하시겠습니까?'),
+                        actions: [
+                          CupertinoDialogAction(
+                            isDefaultAction: true,
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text(
+                              '취소',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
-                        ),
-                        CupertinoDialogAction(
-                          isDestructiveAction: true,
-                          child: Text(
-                            '확인',
-                            style: TextStyle(
-                              fontWeight: FontWeight.bold,
+                          CupertinoDialogAction(
+                            isDestructiveAction: true,
+                            child: Text(
+                              '확인',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    );
-                  },
-                );
+                        ],
+                      );
+                    },
+                  );
+                }
               },
               child: Text('Book Now'),
               style: ElevatedButton.styleFrom(
