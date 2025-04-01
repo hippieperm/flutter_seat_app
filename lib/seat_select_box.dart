@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 class SeatSelectBox extends StatelessWidget {
   int? selectedRow;
   int? selectedCol;
+  void Function(int row, int col) onSelected;
 
-  SeatSelectBox({this.selectedRow, this.selectedCol});
+  SeatSelectBox({
+    this.selectedRow,
+    this.selectedCol,
+    required this.onSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -95,14 +100,17 @@ class SeatSelectBox extends StatelessWidget {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 2),
-        child: AspectRatio(
-          aspectRatio: 1,
-          child: Container(
-            decoration: BoxDecoration(
-              color: rowNum == selectedRow && colNum == selectedCol
-                  ? Colors.amber
-                  : Colors.grey,
-              borderRadius: BorderRadius.circular(10),
+        child: GestureDetector(
+          onTap: () => onSelected(rowNum, colNum),
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: Container(
+              decoration: BoxDecoration(
+                color: rowNum == selectedRow && colNum == selectedCol
+                    ? Colors.amber
+                    : Colors.grey,
+                borderRadius: BorderRadius.circular(10),
+              ),
             ),
           ),
         ),

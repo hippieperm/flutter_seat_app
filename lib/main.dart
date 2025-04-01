@@ -48,6 +48,7 @@ class _SeatPageState extends State<SeatPage> {
           SeatSelectBox(
             selectedCol: selectedCol,
             selectedRow: selectedRow,
+            onSelected: onSelected,
           ),
           SeatBottom(
             selectedCol: selectedCol,
