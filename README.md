@@ -27,8 +27,10 @@
 - `seat_bottom.dart`: 선택된 좌석 정보 표시 및 예약 버튼
 
 ## 📷 스크린샷
+![Simulator Screenshot - iPhone 16 Pro Max - 2025-04-01 at 11 12 32](https://github.com/user-attachments/assets/5311b5fa-73e1-4960-9480-211f685de812)
+![Simulator Screenshot - iPhone 16 Pro Max - 2025-04-01 at 11 20 05](https://github.com/user-attachments/assets/048471a9-08f7-4097-be49-c51dfee6d7f3)
 
-(스크린샷을 추가하시려면 여기에 이미지 링크를 넣어주세요)
+
 
 ## 🚀 시작하기
 
