@@ -26,6 +26,10 @@ class SeatPage extends StatefulWidget {
 }
 
 class _SeatPageState extends State<SeatPage> {
+
+  int? selectedRow;
+  int? selectedCol;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
